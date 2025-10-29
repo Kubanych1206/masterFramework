@@ -1,5 +1,7 @@
 package com.tmb.config;
 
+import com.tmb.config.converters.StringToBrowserTypeConverter;
+import com.tmb.enums.BrowserType;
 import org.aeonbits.owner.Config;
 @Config.LoadPolicy(Config.LoadType.MERGE)
 @Config.Sources({
@@ -10,5 +12,6 @@ import org.aeonbits.owner.Config;
 public interface FrameworkConfig extends Config {
 
     @DefaultValue("CHROME")
+    @ConverterClass(StringToBrowserTypeConverter.class)
     BrowserType browser();
 }

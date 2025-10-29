@@ -1,4 +1,4 @@
-package com.tmb.config;
+package com.tmb.enums;
 
 public enum BrowserType {
 
